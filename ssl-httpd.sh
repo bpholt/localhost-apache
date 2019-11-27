@@ -2,11 +2,11 @@
 
 openssl genrsa \
   -des3 \
-  -passout pass:x \
+  -passout pass:my-amazing-password \
   -out /usr/local/apache2/conf/protected-key.pem \
   2048
 openssl rsa \
-  -passin pass:x \
+  -passin pass:my-amazing-password \
   -in /usr/local/apache2/conf/protected-key.pem \
   -out /usr/local/apache2/conf/server.key
 openssl req \
