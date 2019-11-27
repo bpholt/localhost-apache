@@ -7,15 +7,15 @@ docker run \
   --rm \
   -dit \
   --name localhost-httpd \
-  -p 8443:443 \
+  -p 443:443 \
   -v "$PWD":/usr/local/apache2/htdocs \
-  localhost-httpd:2.4-alpine
+  bpholt/localhost-apache:latest
 ```
 
 ## Build
 
 ```bash
 docker build \
-  --tag localhost-httpd:2.4-alpine \
+  --tag bpholt/localhost-apache:latest \
   .
 ```
